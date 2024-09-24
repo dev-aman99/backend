@@ -20,6 +20,9 @@ app.use("/api/auth", authRouter);
 app.use("/api/contact", contactRouter);
 app.use("/api/orders", orderRouter);
 app.use(errorMiddleware);
+app.get("/", (req, res) => {
+  res.send("test");
+});
 
 // for server running
 const Port = 5000;
